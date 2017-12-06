@@ -1,0 +1,23 @@
+{
+  "name": "metimath",
+  "version": "1.0.0",
+  "description": "metimath server",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reniew/metimath.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reniew/metimath/issues"
+  },
+  "homepage": "https://github.com/reniew/metimath#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}
