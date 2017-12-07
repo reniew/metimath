@@ -33,7 +33,7 @@ app.post('/message', function(req,res){
       'text' : 'Hi i\'m meti, your mathematics private tutor/n'
     }
 
-     keyboard : {
+     "keyboard" : {
       'type' : 'text'
     }
   };
