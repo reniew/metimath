@@ -35,6 +35,10 @@ app.post('/message', function(req,res){
       'type' : 'text'
     }
   };
+  res.set({
+    'content-type' : 'application/json'
+  }).send(JSON.stringify(message));
+  }
   if(_obj.content == "안녕하세요"){
 
     let message = {
@@ -64,7 +68,7 @@ app.post('/message', function(req,res){
   }
   else if (_obj.content == "질문할래"){
     let message = {
-    "meassage" : {
+    "message" : {
       'text' : '사진과 함께 질문사항을 메시지로 입력 해주세요!'
     },
     "keyboard" : {
@@ -78,7 +82,7 @@ app.post('/message', function(req,res){
 
   else if (_obj.content == "질문"){
     let message = {
-    "meassage" : {
+    "message" : {
       'text' : '사진과 함께 질문사항을 메시지로 입력 해주세요!'
     },
     "keyboard" : {
@@ -92,7 +96,7 @@ app.post('/message', function(req,res){
 
   else if(_obj.type == "photo"){
     let message = {
-    "meassage" : {
+    "message" : {
       'text' : '보낸 문제에서 모르는 부분을 입력 해주세요! 입력은 질문 사항은 @입력후 작성해주세요 ex) \"@왜 정답이 3번인지 모르겠어요\"'
     },
     "keyboard" : {
@@ -103,7 +107,9 @@ app.post('/message', function(req,res){
     'content-type' : 'application/json'
   }).send(JSON.stringify(message));
   }
+
   else if(_obj.content.charAt(0) == '@'){
+
     let message = {
       'message' : {
         'text' : '문제를 전달할게요! 잠시만 기다려주세요'
@@ -134,7 +140,6 @@ app.post('/message', function(req,res){
   }).send(JSON.stringify(message));
   }
 });
-
 
 app.listen(9000, function(){
   console.log("connected!");
